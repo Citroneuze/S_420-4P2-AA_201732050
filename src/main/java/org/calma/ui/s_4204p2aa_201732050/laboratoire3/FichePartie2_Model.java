@@ -1,4 +1,4 @@
-package org.calma.ui.s_4204p2aa_201732050;
+package org.calma.ui.s_4204p2aa_201732050.laboratoire3;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Partie2 extends Application {
+public class FichePartie2_Model extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Partie2.class.getResource("Partie2_View.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(FichePartie2_Model.class.getResource("Partie2_View.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 480
         );
         stage.setTitle("Hello!");
