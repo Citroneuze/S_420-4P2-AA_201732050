@@ -1,4 +1,4 @@
-package org.calma.ui.s_4204p2aa_201732050.Partie1;
+package org.calma.ui.s_4204p2aa_201732050;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 
-public class InterfaceCode extends Application {
+public class FichePartie1 extends Application {
 
     private DatePicker checkInDatePicker;
 
