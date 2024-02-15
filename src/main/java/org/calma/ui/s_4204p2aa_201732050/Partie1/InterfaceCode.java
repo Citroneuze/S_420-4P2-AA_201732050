@@ -125,7 +125,7 @@ public class InterfaceCode extends Application {
 
         root.getChildren().add(validerBox);
 
-        Scene scene = new Scene(root, 720, 480);
+        Scene scene = new Scene(root, 640, 480);
 
         stage.setTitle("OCP");
         stage.setScene(scene);
