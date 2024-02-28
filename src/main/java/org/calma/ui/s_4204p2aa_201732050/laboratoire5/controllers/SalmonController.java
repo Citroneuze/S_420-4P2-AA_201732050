@@ -173,6 +173,7 @@ public class SalmonController implements Initializable{
             shakeAndReturnTransition.setCycleCount(2);
             shakeAndReturnTransition.setAutoReverse(true);
             shakeAndReturnTransition.play();
+
         }
     }
 
