@@ -15,6 +15,34 @@
 
   <dependencies>
     <dependency>
+      <groupId>slick</groupId>
+      <artifactId>slick</artifactId>
+      <version>2.3</version>
+      <scope>system</scope>
+      <systemPath>C:/slick/lib/slick.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>jinput</groupId>
+      <artifactId>jinput</artifactId>
+      <version>2.3</version>
+      <scope>system</scope>
+      <systemPath>C:/slick/lib/jinput.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>lwjgl</groupId>
+      <artifactId>lwjgl</artifactId>
+      <version>2.3</version>
+      <scope>system</scope>
+      <systemPath>C:/slick/lib/lwjgl.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>lwjgl_util</groupId>
+      <artifactId>lwjgl_util</artifactId>
+      <version>2.3</version>
+      <scope>system</scope>
+      <systemPath>C:/slick/lib/lwjgl_util.jar</systemPath>
+    </dependency>
+    <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
       <version>17.0.6</version>
@@ -24,8 +52,7 @@
       <artifactId>javafx-fxml</artifactId>
       <version>17.0.6</version>
     </dependency>
-
-<dependency>
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>
@@ -36,7 +63,8 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
-    </dependency>  </dependencies>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -58,7 +86,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>org.calma.ui.s_4204p2aa_201732050.laboratoire5.SalmonApplication</mainClass>
+              <mainClass>org.calma.ui.s_4204p2aa_201732050.Laboratoire7.JeuApplication</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

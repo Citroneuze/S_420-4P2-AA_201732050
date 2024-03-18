@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="45" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" name="basicTileset" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="basicTileset.png" width="256" height="512"/>
+ </tileset>
+ <layer id="1" name="background" width="45" height="24">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3Pyw0AIAhEQbqk/05swMOGn1HfJnsyyOBm5vSLqjntnDBnov4dfX/R3DGDucasBnN8rqKYMd9k3kXZrQZzbvek8VVz5lbMmGlvFw8o34rgEAAA
+  </data>
+ </layer>
+ <layer id="2" name="mur" width="45" height="24">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3VMQ7AIAwDwPySkf//ohNbSxIHhJMSianFPjFAF5GecK0aTxbae805zd5udB+jWfv2VzOSc8q8696sara+Oyvfpzb5f9c5R91sZkvmMHtzGMxoLzIVzZZcRrOWfc32vRXN2l2L9iJT3fzVwW5+64qYs60HZsTRgOAQAAA=
+  </data>
+ </layer>
+ <layer id="3" name="route" width="45" height="24">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2VwQ0AIAgDWdX9l3ACQ0VAlF7iz9oL0ShCujDAVYkoZ/RcS5e2r6NzRIbOZzmvO9TN+RaZc/aCzjlUdNbe46o76s9H+MUZ6c50RLtfc7bm6LzXbc1VdyaxTL+GKKbgEAAA
+  </data>
+ </layer>
+</map>
