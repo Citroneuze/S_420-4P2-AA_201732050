@@ -11,7 +11,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<junit.version>5.10.0</junit.version>  </properties>
+    <junit.version>5.10.0</junit.version>
+    <slick.lib.dir>C:/slick/lib</slick.lib.dir>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -19,28 +21,28 @@
       <artifactId>slick</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>C:/slick/lib/slick.jar</systemPath>
+      <systemPath>${slick.lib.dir}/slick.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>jinput</groupId>
       <artifactId>jinput</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>C:/slick/lib/jinput.jar</systemPath>
+      <systemPath>${slick.lib.dir}/jinput.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>lwjgl</groupId>
       <artifactId>lwjgl</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>C:/slick/lib/lwjgl.jar</systemPath>
+      <systemPath>${slick.lib.dir}/lwjgl.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>lwjgl_util</groupId>
       <artifactId>lwjgl_util</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>C:/slick/lib/lwjgl_util.jar</systemPath>
+      <systemPath>${slick.lib.dir}/lwjgl_util.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
@@ -86,7 +88,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>org.calma.ui.s_4204p2aa_201732050.Laboratoire7.JeuApplication</mainClass>
+              <mainClass>org.calma.ui.s_4204p2aa_201732050.TP4.Application</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

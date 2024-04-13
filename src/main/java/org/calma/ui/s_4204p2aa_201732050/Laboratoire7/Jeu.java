@@ -46,11 +46,9 @@ public class Jeu extends BasicGame {
     private LinkedList<Projectile> projectiles;
     private final int FIRERATE = 250;
     private int delta;
-
     public Jeu(String title) {
         super(title);
     }
-
     @Override
     public void init(GameContainer container) throws SlickException {
 
@@ -84,7 +82,6 @@ public class Jeu extends BasicGame {
 
         container.setTargetFrameRate(60);
     }
-
     private void fillFogOfWar() {
         System.out.println(mapHeight);
         System.out.println(mapWidth);
@@ -94,7 +91,6 @@ public class Jeu extends BasicGame {
             }
         }
     }
-
     private void obscurcir(Graphics grphcs) {
         int mapWidth = fogOfWar.length;
         int mapHeight = fogOfWar[0].length;
@@ -110,7 +106,6 @@ public class Jeu extends BasicGame {
             }
         }
     }
-
     private Animation getAnimation(int rowY){
         Animation anim = new Animation(false);
         for (int x = 0; x < 9; x++){
@@ -118,7 +113,6 @@ public class Jeu extends BasicGame {
         }
         return anim;
     }
-
     private void updateFogOfWar(int playerTileX, int playerTileY, int range) {
         // Déterminez la portée de vision du joueur (range)
         int startX = Math.max(0, playerTileX - range);
@@ -133,7 +127,6 @@ public class Jeu extends BasicGame {
             }
         }
     }
-
     @Override
     public void update(GameContainer container, int delta) throws SlickException {
         Input input = container.getInput();
@@ -290,7 +283,6 @@ public class Jeu extends BasicGame {
         }
 
     }
-
     private Vector2f determineProjectileDirection() {
         switch (lastDirection) {
             case LEFT:
@@ -304,7 +296,6 @@ public class Jeu extends BasicGame {
                 return new Vector2f(0, 1);
         }
     }
-
     private Animation getEnnemiAnimation() throws SlickException {
         Animation anim = new Animation(false);
         Image ennemiSpriteSheet = new Image("org/calma/ui/s_4204p2aa_201732050/laboratoire7/sprites/Loki_32x32.png");
@@ -314,7 +305,6 @@ public class Jeu extends BasicGame {
 
         return anim;
     }
-
     @Override
     public void render(GameContainer container, Graphics g) throws SlickException {
         map.render(0, 0);

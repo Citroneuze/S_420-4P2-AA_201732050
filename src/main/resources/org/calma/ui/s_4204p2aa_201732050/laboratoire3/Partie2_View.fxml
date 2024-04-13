@@ -64,7 +64,7 @@
          <children>
             <ImageView fitHeight="46.0" fitWidth="46.0" GridPane.halignment="CENTER">
                <image>
-                  <Image url="@../../../../../images/ocp.png" />
+                  <Image url="@images/ocp.png" />
                </image>
                <GridPane.margin>
                   <Insets />
@@ -107,7 +107,7 @@
             <TextField prefHeight="25.0" prefWidth="394.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <ImageView GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.rowSpan="2147483647">
                <image>
-                  <Image url="@../../../../../images/email_invalid.png" />
+                  <Image url="@images/email_invalid.png" />
                </image>
             </ImageView>
          </children>

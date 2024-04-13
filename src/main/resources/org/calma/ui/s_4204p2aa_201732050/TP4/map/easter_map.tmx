@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="16" nextobjectid="1">
+ <tileset firstgid="1" name="candy_land" tilewidth="32" tileheight="32" tilecount="160" columns="8">
+  <image source="candy_land.png" trans="000000" width="256" height="640"/>
+ </tileset>
+ <layer id="13" name="Sol" width="30" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2SUQoAIAhDhe5/5y4QzGC5rA36lLeXRugyit8r3Oy/VvpmuJnOJ7gq3253xeAyovA1l8NFc+b23i+bi3K7L+pkrrmrGZQOvjudf9kvk6vIBGbCxSAQDgAA
+  </data>
+ </layer>
+ <layer id="14" name="Obstacles" width="30" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACsWWuwoCMRBFU25h4ddYWvpDoo2Cggs+wWfl13rLEJJ57Yx74cIuWeYk2cxkupRSN5JbWhJjWn2zZ45b09RhDhauJB63r/n7xJHfmlONW36jPQseXImo/dnA2yAupQPcE+NRXE4UN7IuRK43j1uehZLrURNq3DIutd4zfIGv8E3Iytdl3ecn/ILf8KcYmzFxh3ApzZ250lq5UHBX8JrheuofeVTLAy3XWgs47g7eE9woHeHTCNw7/GC4mr7K0i9I8sizdra4UeLuBYmG3oFWrlX5/2r1l9HzkcbXnNlaLnj8Xw959FBW/wBeGtnREA4AAA==
+  </data>
+ </layer>
+</map>
