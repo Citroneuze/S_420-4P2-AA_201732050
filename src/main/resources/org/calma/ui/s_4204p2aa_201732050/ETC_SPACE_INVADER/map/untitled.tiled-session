@@ -43,8 +43,8 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 324.66666666666663,
-                "y": 444
+                "x": 355.3333333333333,
+                "y": 479.33333333333337
             }
         },
         "nebulaBlue.tmx": {
@@ -59,8 +59,8 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 310.66666666666663,
-                "y": 470.66666666666663
+                "x": 310,
+                "y": 468
             }
         },
         "nebulaRed.tmx": {
@@ -99,14 +99,13 @@
     "openFiles": [
         "nebulaR.tmx",
         "level_tileset.tsx",
-        "nebulaB.tmx",
-        "nebulaR.tmx"
+        "nebulaB.tmx"
     ],
     "project": "untitled.tiled-project",
     "recentFiles": [
-        "nebulaR.tmx",
-        "level_tileset.tsx",
         "nebulaB.tmx",
+        "level_tileset.tsx",
+        "nebulaR.tmx",
         "tile.tsx",
         "NebulaRed.tsx",
         "NebulaBlue.tsx",

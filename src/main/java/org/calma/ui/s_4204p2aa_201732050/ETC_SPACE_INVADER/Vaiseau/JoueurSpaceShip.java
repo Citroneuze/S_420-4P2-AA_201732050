@@ -14,10 +14,11 @@ public class JoueurSpaceShip extends Vaiseau {
         //déplacement spécifique au perso
         int rowX = 0;
         int rowY = 0;
-        int height = 70;
-        int width = 47;
+        int height = 120;
+        int width = 100;
         this.setAnim_LEFT(getAnimation(imgAnimPersonnage,rowX,rowY+height,height,width));
-        this.setAnim_RIGHT(getAnimation(imgAnimPersonnage,rowX,rowY+height*2,height,width));
+        this.setAnim_RIGHT(getAnimation(imgAnimPersonnage,rowX,rowY+height,height,width));
+        this.setAnim_DOWN(getAnimation(imgAnimPersonnage,rowX,rowY+height,height,width));
         this.setEstJoueur(true);
     }
     public void render(GameContainer gc, Graphics grphcs, Direction direction) {
@@ -25,8 +26,7 @@ public class JoueurSpaceShip extends Vaiseau {
         super.render(gc, grphcs, direction);
     }
     public void update(GameContainer gc, int i) throws SlickException {
-        System.out.println("Joueur update");
-
+        //System.out.println("Joueur update");
         strategieDeplacementJoueur.deplacer(this, gc);
 
 

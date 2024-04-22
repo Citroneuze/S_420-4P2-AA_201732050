@@ -17,7 +17,7 @@ public abstract class Personnage implements ObserverCollision {
     private Animation anim_LEFT;
     private Direction direction;
     private int keyPressed;
-    private boolean estActif;
+    private boolean estActif = true;
     private int fireRate;
     private boolean estJoueur;
     public int getFireRate() {

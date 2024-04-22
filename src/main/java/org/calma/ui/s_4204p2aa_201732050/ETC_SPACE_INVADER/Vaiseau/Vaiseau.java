@@ -1,6 +1,5 @@
 package org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Vaiseau;
 
-
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Application_spaceInvader;
 //import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Observer.ObserverCollision;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.utils.Direction;
@@ -13,6 +12,7 @@ public abstract class Vaiseau{
     private int movingStep;
     private Animation anim_RIGHT;
     private Animation anim_LEFT;
+    private Animation anim_DOWN;
     private Direction direction;
     private int keyPressed;
     private boolean estActif;
@@ -114,6 +114,14 @@ public abstract class Vaiseau{
         this.anim_LEFT = anim_LEFT;
     }
 
+    public Animation getAnim_DOWN() {
+        return anim_DOWN;
+    }
+
+    public void setAnim_DOWN(Animation anim_DOWN) {
+        this.anim_DOWN = anim_DOWN;
+    }
+
     //Retourne l'�tat actif du personnage
     public boolean siActif() {
         return this.estActif;
@@ -154,6 +162,11 @@ public abstract class Vaiseau{
             case LEFT:
                 anim_LEFT.draw(posX, posY);
                 break;
+            case DOWN:
+                anim_DOWN.draw(posX, posY);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + direction);
         }
 
     }
@@ -162,7 +175,7 @@ public abstract class Vaiseau{
         this.AnimationDraw(Application_spaceInvader.getInstance().getJeu().getTilesSize());
     }
     public void update(GameContainer gc, int i) throws SlickException {
-//        System.out.println("Personnage update");
+        System.out.println("Personnage update");
     }
 }
 

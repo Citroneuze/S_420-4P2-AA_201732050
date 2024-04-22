@@ -5,7 +5,6 @@ import org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.perso
 import org.newdawn.slick.SlickException;
 
 public class FabriqueLapins {
-    private static StrategieDeplacementLapin strategieDeplacementLapin;
 
     public static Lapin getLapin(String couleur, int caseX, int caseY, StrategieDeplacementLapin strategieDeplacement) throws SlickException {
         System.out.println(couleur);
