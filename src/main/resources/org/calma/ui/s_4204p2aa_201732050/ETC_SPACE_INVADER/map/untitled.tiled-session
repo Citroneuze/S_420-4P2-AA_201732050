@@ -1,0 +1,121 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "nebulaR.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "Nebula Aqua-Pink.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.015625,
+            "scaleInEditor": 0.12
+        },
+        "Nebula Blue.tsx": {
+            "scaleInDock": 0.015625,
+            "scaleInEditor": 0.5
+        },
+        "NebulaAqua-Pink.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.015625,
+            "scaleInEditor": 0.0625
+        },
+        "NebulaBlue.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.0625,
+            "scaleInEditor": 0.125
+        },
+        "NebulaRed.tsx": {
+            "scaleInDock": 0.015625,
+            "scaleInEditor": 0.125
+        },
+        "Stars-Big_1_1_PC.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 0.33
+        },
+        "level_tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "nebulaB.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 324.66666666666663,
+                "y": 444
+            }
+        },
+        "nebulaBlue.tmx": {
+            "scale": 0.361,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 480.6094182825485,
+                "y": 1274.2382271468146
+            }
+        },
+        "nebulaR.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 310.66666666666663,
+                "y": 470.66666666666663
+            }
+        },
+        "nebulaRed.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 485,
+                "y": 550
+            }
+        },
+        "tile.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "untitled.tmx": {
+            "scale": 0.33,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1134.848484848485,
+                "y": 775.7575757575758
+            }
+        },
+        "untitled2.tmx": {
+            "scale": 0.529625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 480.52867594996457,
+                "y": 793.0139249468963
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/201732050/Session_Hiver_2024/Interface_Graphique/Exercices/Laboratoire/S_420-4P2-AA_201732050/src/main/resources/org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/map",
+    "map.height": 30,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 20,
+    "openFiles": [
+        "nebulaR.tmx",
+        "level_tileset.tsx",
+        "nebulaB.tmx",
+        "nebulaR.tmx"
+    ],
+    "project": "untitled.tiled-project",
+    "recentFiles": [
+        "nebulaR.tmx",
+        "level_tileset.tsx",
+        "nebulaB.tmx",
+        "tile.tsx",
+        "NebulaRed.tsx",
+        "NebulaBlue.tsx",
+        "NebulaAqua-Pink.tsx",
+        "nebulaBlue.tmx",
+        "nebulaRed.tmx",
+        "Nebula Aqua-Pink.tsx",
+        "untitled.tmx",
+        "Nebula Blue.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

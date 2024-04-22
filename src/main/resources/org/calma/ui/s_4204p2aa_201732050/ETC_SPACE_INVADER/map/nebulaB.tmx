@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" source="NebulaBlue.tsx"/>
+ <tileset firstgid="16385" source="level_tileset.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACg3OyQGCBgIAwNSQbI7dzVWBQUVFEJCGQTkFAbGzzGP+s/vxhx/+IWDPgSMhJ85ciLgSk3AjJSPnTkFJxYMnNQ0tHT0DL0Ym3swsrHzY+LL7yY+APQeOhJw4cyHiSkzCjZSMnDsFJRUPntQ0tHT0DLwYmXgzs7DyYePL7j9+BOw5cCTkxJkLEVdiEm6kZOTcKSipePCkpqGlo2fgxcjEm5mFlQ8bX3Y/+xGw58CRkBNnLkRciUm4kZKRc6egpOLBk5qGlo6egRcjE29mFlY+bHzZ/eJHwJ4DR0JOnLkQcSUm4UZKRs6dgpKKB09qGlo6egZejEy8mVlY+bDxZferHwF7DhwJOXHmQsSVmIQbKRk5dwpKKh48qWlo6egZeDEy8WZmYeXDxpfdb34E7DlwJOTEmQsRV2ISbqRk5NwpKKl48KSmoaWjZ+DFyMSbmYWVDxtfdv/1I2DPgSMhJ85ciLgSk3AjJSPnTkFJxYMnNQ0tHT0DL0Ym3swsrHzY+LL7nx8Bew4cCTlx5kLElZiEGykZOXcKSioePKlpaOnoGXgxMvFmZmHlw8aX3f/9CNhz4EjIiTMXIq7EJNxIyci5U1BS8eBJTUNLR8/Ai5GJNzMLKx82vux+9yNgz4EjISfOXIi4EpNwIyUj505BScWDJzUNLR09Ay9GJt7MLKx82Piy+8OPgD0HjoScOHMh4kpMwo2UjJw7BSUVD57UNLR09Ay8GJl4M7Ow8mHjy+5PPwL2HDgScuLMhYgrMQk3UjJy7hSUVDx4UtPQ0tEz8GJk4s3MwsqHjS+7v/wI2HPgSMiJMxcirsQk3EjJyLlTUFLx4ElNQ0tHz8CLkYk3MwsrHza+7P72I2DPgSMhJ85ciLgSk3AjJSPnTkFJxYMnNQ0tHT0DL0Ym3swsrHzY+PIvvd9y8mAJAAA=
+  </data>
+ </layer>
+ <layer id="2" name="wall" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmN1YKAaYAWaxUdF8/hGzRs1b9S8UfNGzRs1b9S8UfMImOdCptmuDqjmsWPBHDjM9gaKs+HQAzILAOJNJTlgCQAA
+  </data>
+ </layer>
+</map>

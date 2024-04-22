@@ -1,7 +1,6 @@
 package org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.jeu;
 
 import javafx.application.Platform;
-import org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.Application;
 import org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.Interface.StrategieDeplacementJoueur;
 import org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.Interface.StrategieDeplacementLapin;
 import org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.RabbitFactory.FabriqueLapins;
@@ -17,7 +16,7 @@ import org.newdawn.slick.*;
 import org.newdawn.slick.tiled.TiledMap;
 import org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.personnage.*;
 import java.util.*;
-import org.calma.ui.semaine12.laboratoire12_correction.observer.SystemeCapteursCollision;
+
 //Classe gérant le jeu
 public class Jeu extends BasicGame {
     Random random = new Random();

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" source="NebulaRed.tsx"/>
+ <tileset firstgid="16385" source="level_tileset.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACg3OVwKqiAEAwHcJVhFEipRke0luCgpSFLEcc+dj/qetf/zouHClZ+DGyMTMwp0HK082Xrz58CVofvz4iR17Qg5ExBxJOJGSkVNwpqSipqGl48KVnoEbIxMzC3cerDzZePHmw5fgP37s2BNyICLmSMKJlIycgjMlFTUNLR0XrvQM3BiZmFm482DlycaLNx++BP/1Y8eekAMRMUcSTqRk5BScKamoaWjpuHClZ+DGyMTMwp0HK082Xrz58CX42Y8de0IORMQcSTiRkpFTcKakoqahpePClZ6BGyMTMwt3Hqw82Xjx5sOX4Bc/duwJORARcyThREpGTsGZkoqahpaOC1d6Bm6MTMws3Hmw8mTjxZsPX4Jf/dixJ+RARMyRhBMpGTkFZ0oqahpaOi5c6Rm4MTIxs3DnwcqTjRdvPnwJfvNjx56QAxExRxJOpGTkFJwpqahpaOm4cKVn4MbIxMzCnQcrTzZevPnwJfjdjx17Qg5ExBxJOJGSkVNwpqSipqGl48KVnoEbIxMzC3cerDzZePHmw5fgDz927Ak5EBFzJOFESkZOwZmSipqGlo4LV3oGboxMzCzcebDyZOPFmw9fgj/92LEn5EBEzJGEEykZOQVnSipqGlo6LlzpGbgxMjGzcOfBypONF28+fAn+8mPHnpADETFHEk6kZOQUnCmpqGlo6bhwpWfgxsjEzMKdBytPNl68+fAl+NuPHXtCDkTEHEk4kZKRU3CmpKKmoaXjwpWegRsjEzMLdx6sPNl48ebDl+AfP3bsCTkQEXMk4URKRk7BmZKKmoaWjgtXegZujEzMLNx5sPJk48WbD1+C//mxY0/IgYiYIwknUjJyCs6UVNQ0tHRcuNIzcGNkYmbhzoOVJxsv3nz4Evzfjx17Qg5ExBxJOJGSkVNwpqSipuFfqMWhp2AJAAA=
+  </data>
+ </layer>
+ <layer id="3" name="indoor" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmNgGAWjYBSMglEwCkbBKBg6QMqBuuYJUtk8EAAA64fapWAJAAA=
+  </data>
+ </layer>
+ <layer id="2" name="wall" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACmN1YKAaYAWaxUdF8/hGzRs1b9S8UfNGzRs1b9S8UfPQgDGSea5o5voTYY8vmhobqHnsWDAHHvPYcOgBmQUAwC3PhmAJAAA=
+  </data>
+ </layer>
+</map>

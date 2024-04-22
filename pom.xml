@@ -88,7 +88,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>org.calma.ui.s_4204p2aa_201732050.TP4_correction_Travail_pratique_5.Application</mainClass>
+              <mainClass>org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Application_spaceInvader</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
