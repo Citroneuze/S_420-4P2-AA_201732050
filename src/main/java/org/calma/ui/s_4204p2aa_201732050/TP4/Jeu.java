@@ -10,12 +10,16 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class Jeu extends BasicGame {
+    private int tempsEcouleApresVictoire = 0;
+    private static final int TEMPS_ATTENTE_APRES_VICTOIRE = 3000; // Temps en millisecondes (10 secondes)
+
     private TiledMap map;
     private ArrayList<Personnage> lapins = new ArrayList<>();
     private Personnage lapin;
     private Joueur joueur;
     Iterator<Personnage> iter;
     private int lapinTimer = 0;
+    private int  compteurKill = 0;
     public Jeu(String title) {
         super(title);
     }
@@ -44,15 +48,15 @@ public class Jeu extends BasicGame {
                 personnage.update(container, delta);
             }
         }
-        if(joueur.isAlive()){
-            joueur.update(container, delta);
-        }
+        joueur.update(container, delta);
 
-        for (Personnage lapin : lapins) {
+        for (Personnage lapin : new ArrayList<>(lapins)) { // Utilisation d'une nouvelle liste pour éviter ConcurrentModificationException
             if (joueur.getCaseX() == lapin.getCaseX() && joueur.getCaseY() == lapin.getCaseY()) {
                 System.out.println("Le joueur a marché sur un lapin !");
                 if (lapin instanceof Lapin) {
-                    ((Lapin) lapin).setAlive(false); // Appeler la méthode pour faire mourir le lapin
+                    ((Lapin) lapin).setAlive(false, (Lapin) lapin); // Appeler la méthode pour faire mourir le lapin
+                    compteurKill++;
+                    lapins.remove(lapin); // Supprimer le lapin de la liste
                 }
             }
         }
@@ -65,6 +69,13 @@ public class Jeu extends BasicGame {
             lapinTimer = 0; // Réinitialiser le compteur
         }
 
+        if (compteurKill >= 10) {
+            System.out.println("Le joueur a atteint 2 kills, jeu terminé !");
+            tempsEcouleApresVictoire += delta;
+            if (tempsEcouleApresVictoire >= TEMPS_ATTENTE_APRES_VICTOIRE) {
+                container.exit(); // Fermer le jeu après le délai spécifié
+            }
+        }
     }
 
     @Override
@@ -132,5 +143,14 @@ public class Jeu extends BasicGame {
     private int getRandomPositionY() {
         Random random = new Random();
         return random.nextInt(map.getHeight());
+    }
+
+    public void setKill() {
+        this.compteurKill += 1;
+        System.out.println(compteurKill);
+    }
+
+    public void removeLapin(Lapin lapin) {
+        lapins.remove(lapin);
     }
 }

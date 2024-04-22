@@ -1,4 +1,5 @@
 package org.calma.ui.s_4204p2aa_201732050.TP4.personnage;
+import org.calma.ui.s_4204p2aa_201732050.TP4.Application;
 import org.calma.ui.s_4204p2aa_201732050.TP4.projectile.Projectile;
 import org.calma.ui.s_4204p2aa_201732050.TP4.utils.Constante;
 import org.calma.ui.s_4204p2aa_201732050.TP4.utils.Direction;
@@ -16,6 +17,7 @@ public abstract class Personnage {
     private Direction direction;
     private Image personnages;
     private boolean isAlive;
+
     public Personnage(String nom, int caseX, int caseY, String s) throws SlickException {
         this.nom = nom;
         this.caseX = caseX;
@@ -123,8 +125,14 @@ public abstract class Personnage {
     public boolean isAlive() {
         return isAlive;
     }
-    public void setAlive(boolean alive) {
+    public void setAlive(boolean alive, Lapin lapin) {
         isAlive = alive;
-        System.out.println(alive);
+        Application.getInstance().getJeu().setKill();
+        Application.getInstance().getJeu().removeLapin(lapin);
+    }
+
+
+    public void setAliveJoueur(boolean b) {
+        isAlive = b;
     }
 }

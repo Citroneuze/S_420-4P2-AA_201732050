@@ -58,7 +58,7 @@ public class Projectile {
         if (estActif) {
             Joueur joueur = Application.getInstance().getJeu().getJoueur();
             if (siToucheJoueur(joueur.getDirection())) {
-                joueur.setAlive(false);
+                joueur.setAliveJoueur(false);
             }
 
             float uneSeconde = 1000.0f;
