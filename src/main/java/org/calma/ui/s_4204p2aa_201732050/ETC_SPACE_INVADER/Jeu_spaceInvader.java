@@ -13,7 +13,8 @@ import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Vaiseau.JoueurSpaceSh
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Vaiseau.Vaisseau;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.shipYard.ShipFactory;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.utils.Direction;
-
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.Sound;
 
 import org.newdawn.slick.*;
 import org.newdawn.slick.tiled.TiledMap;
@@ -37,8 +38,10 @@ public class Jeu_spaceInvader extends BasicGame {
     private static final int MAX_LEVEL = 2;  // Vous avez 2 niveaux dans le jeu
     private boolean gameOver = false;
     private static Jeu_spaceInvader INSTANCE = null;
-    //---------- INTÉGRATION DU THREAD - DEBUT -------------------------//
     private ThreadGestion jeuThread = new ThreadGestion();
+    private Sound music1;
+    private Sound music2;
+
 
     public static Jeu_spaceInvader getInstance() {
         return INSTANCE;
@@ -47,15 +50,11 @@ public class Jeu_spaceInvader extends BasicGame {
     public ThreadGestion getJeuThread() {
         return jeuThread;
     }
-
     public void setJeuThread(ThreadGestion jeuThread) {
         this.jeuThread = jeuThread;
     }
-    //---------- INTÉGRATION DU THREAD - FIN -------------------------//
     public static Jeu_spaceInvader init(String title) throws SlickException {
-        System.out.println("allo_____________________________________________________________________________________");
         if(INSTANCE != null){
-            System.out.println("deja la--------------------------------------------------------------------------------");
             return INSTANCE;
         }
         else{
@@ -67,6 +66,7 @@ public class Jeu_spaceInvader extends BasicGame {
     public Jeu_spaceInvader(String title) {
         super(title);
         lazers = new LinkedList<>();
+
     }
 
     @Override
@@ -75,12 +75,17 @@ public class Jeu_spaceInvader extends BasicGame {
     }
 
     public void loadLevel(int level) throws SlickException {
+//        music1 = new Sound("org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/music/Battleship (1).ogg");
         lazers.clear();
         map = new TiledMap("org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/map/nebula" + level + ".tmx");
         indexCalqueObstacles = map.getLayerIndex("wall");
         joueur = new JoueurSpaceShip(9, 27, strategieDeplacementJoueur);
         vaisseaux.clear();
         vaisseaux.add(joueur);
+
+
+//        music1.play(1f, 1f);
+//        music1.play();
         if (level == 2) {
             // Pour le niveau 2, générer deux vagues d'ennemis
             spawnWave(shipNumber, strategieDeplacementEnnemi, 3, 5);  // Première vague à la ligne 5
@@ -274,6 +279,7 @@ public class Jeu_spaceInvader extends BasicGame {
     public void resetGame() {
         score = 0;
         currentLevel = 1;
+        System.out.println(currentLevel+"javafx");
         vaisseaux.clear();
         lazers.clear();
         gameOver = false;

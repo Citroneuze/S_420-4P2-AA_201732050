@@ -38,7 +38,7 @@ public class JoueurSpaceShip extends Vaisseau {
         strategieDeplacementJoueur.deplacer(this, gc);
     }
 
-    private void fireProjectile() {
+    public void fireProjectile() {
         int posX = this.getCaseX() * 32;
         int posY = this.getCaseY() * 32;
         Vector2f position = new Vector2f(posX, posY - 32); // Ajuster pour tirer depuis le haut du vaisseau
