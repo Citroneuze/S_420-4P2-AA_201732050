@@ -1,4 +1,5 @@
 package org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER;
+import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Observer.SystemeCapteursCollisionShip;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.SlickException;
 
@@ -7,8 +8,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Application_spaceInvader {
-
-
     private static Jeu_spaceInvader jeu;
     private AppGameContainer app;
     public AppGameContainer getApp() {

@@ -10,6 +10,7 @@ public class Dreadnought extends EnnemiSpaceShip {
     public Dreadnought(int caseX, int caseY, StrategieDeplacementEnnemi strategieDeplacement) throws SlickException {
         super(caseX, caseY, strategieDeplacement);
         this.setStrategieDeplacement(strategieDeplacement);
+        this.setNom("Dreadnought");
         int rowX = 0;
         int rowY = 0;
         int height = 120;

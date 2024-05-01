@@ -2,10 +2,13 @@ package org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Vaiseau;
 
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Application_spaceInvader;
 //import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Observer.ObserverCollision;
+import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Jeu_spaceInvader;
+import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Observer.ObserverCollision;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.utils.Direction;
+
 import org.newdawn.slick.*;
 
-public abstract class Vaiseau{
+public abstract class Vaisseau implements ObserverCollision {
     private String nom;
     private int caseX;
     private int caseY;
@@ -16,7 +19,7 @@ public abstract class Vaiseau{
     private Direction direction;
     private int keyPressed;
     private boolean estActif;
-    private int fireRate;
+    private int fireRate = 2000;
     private boolean estJoueur;
     public int getFireRate() {
         return fireRate;
@@ -24,7 +27,7 @@ public abstract class Vaiseau{
     public void setFireRate(int fireRate) {
         this.fireRate = fireRate;
     }
-    public Vaiseau(String nom, int caseX, int caseY) throws SlickException {
+    public Vaisseau(String nom, int caseX, int caseY) throws SlickException {
         this.nom = nom;
         this.caseX = caseX;
         this.caseY = caseY;
@@ -130,7 +133,7 @@ public abstract class Vaiseau{
     //déplacement
     public void moveLeft() throws SlickException {
         this.caseX -= movingStep;
-//        Application_spaceInvader.getInstance().getJeu().getCapteurs().observerCollisionPersonnage(Application_spaceInvader.getInstance().getJeu());
+//        Jeu.getInstance().getJeu().getCapteurs().observerCollisionPersonnage(Application_spaceInvader.getInstance().getJeu());
     }
     public void moveRight() throws SlickException {
         this.caseX += movingStep;
@@ -172,7 +175,7 @@ public abstract class Vaiseau{
     }
     public void render(GameContainer gc, Graphics grphcs, Direction direction) {
 //        System.out.println("Personnage render");
-        this.AnimationDraw(Application_spaceInvader.getInstance().getJeu().getTilesSize());
+        this.AnimationDraw(Jeu_spaceInvader.getInstance().getTilesSize());
     }
     public void update(GameContainer gc, int i) throws SlickException {
         System.out.println("Personnage update");

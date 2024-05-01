@@ -2,6 +2,7 @@ package org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Deplacement;
 
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Application_spaceInvader;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Interface.StrategieDeplacementVaiseau;
+import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Jeu_spaceInvader;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Vaiseau.JoueurSpaceShip;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.utils.Direction;
 import org.newdawn.slick.GameContainer;
@@ -13,8 +14,8 @@ public class DeplacementJoueur implements StrategieDeplacementVaiseau {
 
     @Override
     public void deplacer(JoueurSpaceShip joueur, GameContainer gc) throws SlickException {
-        int indexCalqueObstacles = Application_spaceInvader.getInstance().getJeu().getIndexCalqueObstacles();
-        TiledMap map = Application_spaceInvader.getInstance().getJeu().getMap();
+        int indexCalqueObstacles = Jeu_spaceInvader.getInstance().getIndexCalqueObstacles();
+        TiledMap map = Jeu_spaceInvader.getInstance().getMap();
         //Saisie de touches pour actions
         Input input = gc.getInput();
         if (input.isKeyPressed(Input.KEY_RIGHT)) {

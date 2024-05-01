@@ -10,6 +10,7 @@ public class BattleCruiser extends EnnemiSpaceShip {
     public BattleCruiser(int caseX, int caseY, StrategieDeplacementEnnemi strategieDeplacement) throws SlickException {
         super(caseX, caseY, strategieDeplacement);
         this.setStrategieDeplacement(strategieDeplacement);
+        this.setNom("BattleCruiser");
         int rowX = 0;
         int rowY = 0;
         int height = 120;
