@@ -48,12 +48,9 @@ public class Jeu_spaceInvader extends BasicGame {
     private static Jeu_spaceInvader INSTANCE = null;
     private ThreadGestion jeuThread = new ThreadGestion();
     private SoundManager soundManager;
-
-
     public static Jeu_spaceInvader getInstance() {
         return INSTANCE;
     }
-
     public ThreadGestion getJeuThread() {
         return jeuThread;
     }
@@ -67,20 +64,17 @@ public class Jeu_spaceInvader extends BasicGame {
         else{
             INSTANCE = new Jeu_spaceInvader(title);
             return INSTANCE;
-
         }
     }
     public Jeu_spaceInvader(String title) {
         super(title);
         lazers = new LinkedList<>();
     }
-
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
         soundManager = new SoundManager();
         loadLevel(currentLevel);
     }
-
     public void loadLevel(int level) throws SlickException {
         soundManager.loadSound("background", "src/main/resources/org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/music/music.wav");
         soundManager.loadSound("laser", "src/main/resources/org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/music/laser.wav");
@@ -92,7 +86,6 @@ public class Jeu_spaceInvader extends BasicGame {
         joueur = new JoueurSpaceShip(9, 27, strategieDeplacementJoueur);
         vaisseaux.clear();
         vaisseaux.add(joueur);
-
         if (level == 2) {
             // Pour le niveau 2, générer deux vagues d'ennemis
             spawnWave(shipNumber, strategieDeplacementEnnemi, 3, 5);  // Première vague à la ligne 5
@@ -102,7 +95,6 @@ public class Jeu_spaceInvader extends BasicGame {
             newEnnemiShipsOnMap(shipNumber * level, strategieDeplacementEnnemi);
         }
     }
-
     public void changeMap() throws SlickException {
         if (currentLevel < MAX_LEVEL) {
             currentLevel++;
@@ -111,7 +103,6 @@ public class Jeu_spaceInvader extends BasicGame {
             gameOver = true; // Ou redémarrer le jeu, ou montrer un écran de victoire, etc.
         }
     }
-
     private void spawnWave(int shipNumber, StrategieDeplacementEnnemi strategieDeplacement, int startX, int startY) throws SlickException {
         int shipWidthInTiles = 2;  // Largeur du vaisseau en nombre de tuiles
 
@@ -127,14 +118,11 @@ public class Jeu_spaceInvader extends BasicGame {
             }
         }
     }
-
     public void playsound(){
         soundManager.playSound("laser");
         soundManager.stopSound("laser");
     }
-
    // Déclarer une variable pour suivre si le jeu est terminé
-
     public void update(GameContainer gameContainer, int i) throws SlickException {
         if (!gameOver) {  // Vérifier si le jeu n'est pas déjà terminé
             //---------- INTÉGRATION DU THREAD - DEBUT -------------------------//
@@ -164,7 +152,6 @@ public class Jeu_spaceInvader extends BasicGame {
                     iterVaisseau.remove();
                 }
             }
-
             iterLazers = lazers.iterator();
             while (iterLazers.hasNext()) {
                 Lazer lazer = iterLazers.next();
@@ -177,7 +164,6 @@ public class Jeu_spaceInvader extends BasicGame {
                     iterLazers.remove();
                 }
             }
-
             if (allEnemiesDefeated()) {
                 score += 100;
                  // Marquer le jeu comme terminé
@@ -189,36 +175,30 @@ public class Jeu_spaceInvader extends BasicGame {
                     showEndGameOptions();  // Afficher les options de fin de jeu
                 }
             }
-
-
+            if(!joueur.isEstActif()){
+                gameOver = true;
+            }
         }
         handleInput(gameContainer);
     }
-
-
     private void showEndGameOptions() {
         System.out.println("Fin du jeu. Score final : " + score);
         // Vous pouvez ici définir la logique pour afficher les options de redémarrage ou de sortie du jeu.
     }
-
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
         // Render the map background first
         map.render(0, 0);
-
         // Display the current level and score in the top-left corner
         graphics.drawString("Niveau " + currentLevel + " - Score: " + score, 10, 30);
-
         // Render all enemy ships
         for (Vaisseau ennemi : vaisseaux) {
             ennemi.render(gameContainer, graphics, Direction.RIGHT);
         }
-
         // Render all lasers
         for (Lazer lazer : lazers) {
             lazer.render(gameContainer, graphics);
         }
-
         // If the game is over, display the game over screen
         if (gameOver) {
             graphics.setColor(org.newdawn.slick.Color.red);  // Set the color for the game over text
