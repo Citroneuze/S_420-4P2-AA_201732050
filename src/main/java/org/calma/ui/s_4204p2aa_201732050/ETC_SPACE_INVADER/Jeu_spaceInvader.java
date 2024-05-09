@@ -173,10 +173,14 @@ public class Jeu_spaceInvader extends BasicGame {
                 } else {
                     gameOver = true;  // Marquer le jeu comme terminé
                     showEndGameOptions();  // Afficher les options de fin de jeu
+                    handleInput(gameContainer);
+
                 }
             }
+
             if(!joueur.isEstActif()){
                 gameOver = true;
+                handleInput(gameContainer);
             }
         }
         handleInput(gameContainer);
@@ -190,7 +194,7 @@ public class Jeu_spaceInvader extends BasicGame {
         // Render the map background first
         map.render(0, 0);
         // Display the current level and score in the top-left corner
-        graphics.drawString("Niveau " + currentLevel + " - Score: " + score, 10, 30);
+        graphics.drawString("Niveau " + currentLevel + " - Score: " + score, 40, 30);
         // Render all enemy ships
         for (Vaisseau ennemi : vaisseaux) {
             ennemi.render(gameContainer, graphics, Direction.RIGHT);
@@ -202,6 +206,7 @@ public class Jeu_spaceInvader extends BasicGame {
         // If the game is over, display the game over screen
         if (gameOver) {
             graphics.setColor(org.newdawn.slick.Color.red);  // Set the color for the game over text
+            graphics.drawString("GAME OVER", 300, 100);
             graphics.drawString("Appuyez sur 'R' pour recommencer ou 'Q' pour quitter.", 100, 130);
             graphics.setColor(org.newdawn.slick.Color.white); // Reset the color to default
         }
