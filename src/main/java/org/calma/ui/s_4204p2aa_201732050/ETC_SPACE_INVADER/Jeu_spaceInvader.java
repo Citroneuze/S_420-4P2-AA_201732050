@@ -16,6 +16,14 @@ import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.utils.Direction;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Sound;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.File;
+import java.io.IOException;
+
 import org.newdawn.slick.*;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -39,8 +47,7 @@ public class Jeu_spaceInvader extends BasicGame {
     private boolean gameOver = false;
     private static Jeu_spaceInvader INSTANCE = null;
     private ThreadGestion jeuThread = new ThreadGestion();
-    private Sound music1;
-    private Sound music2;
+    private SoundManager soundManager;
 
 
     public static Jeu_spaceInvader getInstance() {
@@ -66,16 +73,19 @@ public class Jeu_spaceInvader extends BasicGame {
     public Jeu_spaceInvader(String title) {
         super(title);
         lazers = new LinkedList<>();
-
     }
 
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
+        soundManager = new SoundManager();
         loadLevel(currentLevel);
     }
 
     public void loadLevel(int level) throws SlickException {
-//        music1 = new Sound("org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/music/Battleship (1).ogg");
+        soundManager.loadSound("background", "src/main/resources/org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/music/music.wav");
+        soundManager.loadSound("laser", "src/main/resources/org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/music/laser.wav");
+        soundManager.loopSound("background");
+
         lazers.clear();
         map = new TiledMap("org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/map/nebula" + level + ".tmx");
         indexCalqueObstacles = map.getLayerIndex("wall");
@@ -83,9 +93,6 @@ public class Jeu_spaceInvader extends BasicGame {
         vaisseaux.clear();
         vaisseaux.add(joueur);
 
-
-//        music1.play(1f, 1f);
-//        music1.play();
         if (level == 2) {
             // Pour le niveau 2, générer deux vagues d'ennemis
             spawnWave(shipNumber, strategieDeplacementEnnemi, 3, 5);  // Première vague à la ligne 5
@@ -121,6 +128,10 @@ public class Jeu_spaceInvader extends BasicGame {
         }
     }
 
+    public void playsound(){
+        soundManager.playSound("laser");
+        soundManager.stopSound("laser");
+    }
 
    // Déclarer une variable pour suivre si le jeu est terminé
 

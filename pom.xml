@@ -4,15 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.calma.ui</groupId>
-  <artifactId>S_420-4P2-AA_201732050</artifactId>
+  <groupId>org.calma</groupId>
+  <artifactId>UI</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>S_420-4P2-AA_201732050</name>
+  <name>420-4P2-AA_Master</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>5.10.0</junit.version>
-    <slick.lib.dir>C:/slick/lib</slick.lib.dir>
   </properties>
 
   <dependencies>
@@ -21,28 +20,42 @@
       <artifactId>slick</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>${slick.lib.dir}/slick.jar</systemPath>
+      <systemPath>C:/slick/lib/slick.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>jinput</groupId>
       <artifactId>jinput</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>${slick.lib.dir}/jinput.jar</systemPath>
+      <systemPath>C:/slick/lib/jinput.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>lwjgl</groupId>
       <artifactId>lwjgl</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>${slick.lib.dir}/lwjgl.jar</systemPath>
+      <systemPath>C:/slick/lib/lwjgl.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>lwjgl_util</groupId>
       <artifactId>lwjgl_util</artifactId>
       <version>2.3</version>
       <scope>system</scope>
-      <systemPath>${slick.lib.dir}/lwjgl_util.jar</systemPath>
+      <systemPath>C:/slick/lib/lwjgl_util.jar</systemPath>
+    </dependency>
+    <!--        <dependency>-->
+    <!--            <groupId>jogg-0.0.7</groupId>-->
+    <!--            <artifactId>jogg-0.0.7</artifactId>-->
+    <!--            <version>2.3</version>-->
+    <!--            <scope>system</scope>-->
+    <!--            <systemPath>C:/slick/lib/jogg-0.0.7.jar</systemPath>-->
+    <!--        </dependency>-->
+    <dependency>
+      <groupId>jorbis-0.0.15</groupId>
+      <artifactId>jorbis-0.0.15</artifactId>
+      <version>2.3</version>
+      <scope>system</scope>
+      <systemPath>C:/slick/lib/jorbis-0.0.15.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
@@ -66,14 +79,23 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-
-
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-swing</artifactId>
+      <version>17.0.6</version>
+    </dependency>
   </dependencies>
-
-
 
   <build>
     <plugins>
+      <!--            <plugin>-->
+      <!--                <groupId>slick</groupId>-->
+      <!--                <artifactId>slick</artifactId>-->
+      <!--                <configuration>-->
+      <!--                    <argLine>-Djava.library.path="C:\slick\"</argLine>-->
+      <!--                </configuration>-->
+      <!--            </plugin>-->
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>

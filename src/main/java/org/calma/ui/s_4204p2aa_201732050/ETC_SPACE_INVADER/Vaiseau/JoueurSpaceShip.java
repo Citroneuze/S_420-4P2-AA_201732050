@@ -3,14 +3,13 @@ import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Application_spaceInva
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Interface.StrategieDeplacementVaiseau;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Jeu_spaceInvader;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.Lazer.Lazer;
+import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.SoundManager;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.utils.Direction;
 import org.calma.ui.s_4204p2aa_201732050.ETC_SPACE_INVADER.utils.OwnerId;
 import org.newdawn.slick.*;
 import org.newdawn.slick.geom.Vector2f;
 
 public class JoueurSpaceShip extends Vaisseau {
-
-    //private ObserverCollision observer;
     private Image imgAnimPersonnage = new Image("org/calma/ui/s_4204p2aa_201732050/ETC_SPACE_INVADER/sprite/Klaed-Battlecruiser-Base.png");
     private StrategieDeplacementVaiseau strategieDeplacementJoueur;
     public JoueurSpaceShip(int caseX, int caseY, StrategieDeplacementVaiseau strategie) throws SlickException {
@@ -39,6 +38,7 @@ public class JoueurSpaceShip extends Vaisseau {
     }
 
     public void fireProjectile() {
+        Jeu_spaceInvader.getInstance().playsound();
         int posX = this.getCaseX() * 32;
         int posY = this.getCaseY() * 32;
         Vector2f position = new Vector2f(posX, posY - 32); // Ajuster pour tirer depuis le haut du vaisseau
